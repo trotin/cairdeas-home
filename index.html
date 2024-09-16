@@ -23,16 +23,11 @@
         }
         header {
             text-align: center;
-            padding: 40px 0;
+            padding: 20px 0;
         }
-        .logo {
-            max-width: 100px;
+        .logo, .group-name {
+            max-width: 100%;
             height: auto;
-        }
-        .group-name {
-            max-width: 200px;
-            height: auto;
-            margin-top: 20px;
         }
         .baseline {
             font-style: italic;
@@ -44,6 +39,8 @@
         }
         .social-links {
             margin-top: 40px;
+            display: flex;
+            justify-content: center;
         }
         .social-links a {
             color: #0a0a0a;
@@ -55,20 +52,27 @@
             padding: 20px;
             background-color: #beb9b9;
         }
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .logo, .group-name {
+                max-width: 80%;
+            }
+            .social-links {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <!-- <img src="/images/cairdeas-friendship.png" alt="Logo Cairdeas" class="logo"> -->
-            <!-- <img src="/images/cairdeas-friendship.png" alt="Cairdeas" class="group-name"> -->
             <img src="/images/cairdeas-friendship.png" alt="Cairdeas - friendship">
-            <!-- <p class="baseline">Musiques Celtiques</p> -->
         </header>
         <main class="content">
             <p>Bienvenue sur le site officiel de Cairdeas, groupe de musiques celtiques aux influences irlandaises.</p>
             <p>Musiques et chants bretons, écossais, ibériques, acadiens et d'ailleurs sont autant de prétextes pour explorer les liens qui unissent le monde celtique.</p>
-            <p></p>
             <p>Musiques à écouter, à chanter et à danser : nous sommes en train de préparer cela. Restez à l'écoute !</p>
             <p>Pour nous contacter : <a href="mailto:contact@cairdeas.fr">contact@cairdeas.fr</a></p>
             <div class="social-links">
@@ -76,9 +80,10 @@
                 <a href="https://www.youtube.com/@cairdeasfr" target="_blank" alt="Youtube @carideasfr">YouTube</a>
             </div>
         </main>
-    </div>
+   
     <footer>
         <p>&copy; 2024 Cairdeas. Tous droits réservés.</p>
     </footer>
+</div>
 </body>
 </html>
